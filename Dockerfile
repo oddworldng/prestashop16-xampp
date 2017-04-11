@@ -42,6 +42,12 @@ ADD https://www.prestashop.com/download/old/prestashop_1.6.1.12_es.zip /tmp/pres
 RUN unzip /tmp/prestashop.zip -d /opt/lampp/htdocs/
 RUN rm /tmp/prestashop.zip
 
+# Configuring Prestashop
+RUN a2enmod rewrite
+COPY config_files/defines.inc.php /opt/lampp/htdocs/prestashop/config/
+RUN chown www-data:www-data -R /opt/lampp/htdocs/
+RUN chmod 777 -R /opt/lampp/htdocs/
+
 # SSH server
 RUN apt-get install -y -q supervisor openssh-server
 RUN mkdir -p /var/run/sshd

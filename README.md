@@ -12,17 +12,17 @@ PrestaShop es una aplicación libre y gratuita de eCommerce, diseñada para prop
 Actualmente, la forma más sencilla de ejecutar este contenedor es:
 
 ```
-docker run --name prestashop16 -p 41061:22 -p 41062:80 -d -v ~/my_web_pages:/www oddworldng/prestashop16
+docker run --name prestashop16 -p 41061:22 -p 41062:80 -d -v ~/my_web_pages:/www oddworldng/prestashop16-xampp
 ```
 
-Abre esta ruta en tu navegador para comenzar la instalación: `http://localhost:8080/prestashop`.
+Abre esta ruta en tu navegador para comenzar la instalación: `http://localhost:41062/prestashop`.
 
 
 ## PhpMyAdmin - Configurar la base de datos
 
 En este contenedor disponemos de PhpMyAdmin, en el cual debemos configurar nuestra base de datos para instalar Prestashop.
 
-Para acceder a la interfaz web de PhpMyAdmin, accedemos a la siguiente URL:  [localhost:41062/phpmyadmin](http://localhost:41062/phpmyadmin)
+Para acceder a la interfaz web de PhpMyAdmin, accedemos a la siguiente URL `http://localhost:41062/phpmyadmin`
 
 ## Acceso mediante SSH
 
@@ -44,3 +44,7 @@ Consulta [más información](https://www.prestashop.com/en/osl-license) sobre la
 Puedes encontrar la documentación oficial de Prestashop 1.6 (en Español) en el siguiente enlace:
 
 * [PrestaShop 1.6](http://doc.prestashop.com/pages/viewpage.action?pageId=26148899)
+
+## Nota
+
+Este proyecto ha sido basado en el contenedor https://hub.docker.com/r/tomsik68/xampp/
