@@ -1,24 +1,12 @@
-FROM ubuntu:17.04
+FROM debian:jessie
 
 MAINTAINER Andrés Nacimiento <andresnacimiento@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update --fix-missing
+RUN apt-get update
 
 # curl is needed to download the xampp installer, net-tools provides netstat command for xampp
-RUN apt-get -y install curl net-tools
-RUN apt-get install -y \
-	php \
-	libapache2-mod-php \
-	php-mcrypt \
-	unzip \
-	bash-completion \
-	nmap \
-	php-mysql \
-	wget \
-	php7.0-xml \
-	php7.0-gd \
-	php7.0-mbstring
+RUN apt-get -y install curl net-tools unzip apache2
 
 RUN curl -o xampp-linux-installer.run "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/5.6.21/xampp-linux-x64-5.6.21-0-installer.run?from_af=true"
 RUN chmod +x xampp-linux-installer.run

@@ -12,7 +12,7 @@ PrestaShop es una aplicación libre y gratuita de eCommerce, diseñada para prop
 Actualmente, la forma más sencilla de ejecutar este contenedor es:
 
 ```
-docker run --name prestashop16 -p 41061:22 -p 41062:80 -d -v ~/my_web_pages:/www oddworldng/prestashop16-xampp
+docker run --name prestashop16-xampp -p 41061:22 -p 41062:80 -d -v ~/my_web_pages:/www oddworldng/prestashop16-xampp
 ```
 
 Abre esta ruta en tu navegador para comenzar la instalación: `http://localhost:41062/prestashop`.
