@@ -33,6 +33,28 @@ ssh root@localhost -p 41061
 ```
 La contraseña es: **root**
 
+## Eliminar la carpeta /install después de la instalación
+
+Accedemos mediante SSH (ver apartado anterior) a nuestro contenedor y borramos la carpeta `/install` utilizando el comando:
+
+```
+rm -rf /opt/lampp/htdocs/prestashop/install/
+```
+
+## Error: no entra el backoffice
+
+Uno de los problemas que ocurre es que cuando termina la instalación de Prestashop con el contenedor, no entra en el backoffice de Prestashop.
+
+Para solucionar esto, podemos renombrar la carpeta admin (nos conectamos mediante SSH) utilizando el siguiente comando:
+
+```
+mv /opt/lampp/htdocs/prestashop/admin /opt/lampp/htdocs/prestashop/admin1234
+```
+
+Con este cambio, ahora podremos acceder a nuestro backoffice mediante la siguiente URL: 
+
+`http://localhost:41062/prestashop/admin1234`
+
 ## Licencia
 
 Prestashop 1.6 utiliza la licencia [Academic Free License ("AFL") v. 3.0](https://opensource.org/licenses/AFL-3.0)
