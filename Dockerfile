@@ -26,7 +26,7 @@ RUN mkdir /www
 RUN ln -s /www /opt/lampp/htdocs/
 
 # Get PrestaShop
-ADD https://www.prestashop.com/download/old/prestashop_1.6.1.12_es.zip /tmp/prestashop.zip
+ADD https://download.prestashop.com/download/old/prestashop_1.6.1.13_es.zip /tmp/prestashop.zip
 RUN unzip /tmp/prestashop.zip -d /opt/lampp/htdocs/
 RUN rm /tmp/prestashop.zip
 

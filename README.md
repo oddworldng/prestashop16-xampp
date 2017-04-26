@@ -1,7 +1,7 @@
 # PrestaShop con Docker
 
 ### Imagen para PrestaShop 1.6.1.12 + XAMPP
-* `1.6.1.12 (Español)`
+* `1.6.1.13 (Español)`
 
 ## Qué es PrestaShop
 
